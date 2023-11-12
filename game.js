@@ -12,14 +12,24 @@ $(document).keypress(function() {   //listening to the keypress i.e any keyboard
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
+    $(".mybutton").css("display", "none");
   }
 });
+
+$(".mybutton").on("click", function(){
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+    $(".mybutton").css("display", "none");
+  }
+})
 
 // user presses a button
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);    //user pressed buttons are pushe into userChosenColour
+  userClickedPattern.push(userChosenColour);    //user pressed buttons are push into userChosenColour
 
   playSound(userChosenColour);
   animatePress(userChosenColour);     // play sound and animate the tiles while they are pressed
@@ -80,4 +90,5 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  $(".mybutton").css("display", "inline-block");
 }

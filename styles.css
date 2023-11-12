@@ -14,7 +14,6 @@ body {
   display: block;
   width: 50%;
   margin: auto;
-
 }
 
 .btn {
@@ -22,7 +21,7 @@ body {
   display: inline-block;
   height: 200px;
   width: 200px;
-  border: 10px solid black;
+  border: 5px solid black;
   border-radius: 20%;
 }
 
@@ -50,4 +49,25 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+.mybutton {
+  padding: 2px;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(0, 0, 0);
+  color: white;
+  box-shadow:
+      1px 2px 2px hsl(220deg 60% 50% / 0.333),
+      2px 4px 4px hsl(220deg 60% 50% / 0.333),
+      3px 6px 6px hsl(220deg 60% 50% / 0.333);
+  font-size: .8rem;
+  font-family: 'Press Start 2P', cursive;
+  transition: transform 180ms;
+}
+
+.mybutton:hover {
+  transform: translateY(-3px);
 }
