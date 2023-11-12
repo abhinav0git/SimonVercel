@@ -1,3 +1,35 @@
+@media (max-width: 768px) {
+  h1{
+    font-size: 1.8rem !important;
+    margin: 1rem !important;
+  }
+  
+  .btn{
+    margin: 17px !important;
+  }
+
+  #red {
+    height: 100px;
+    width: 100px;
+  }
+  #green{
+    height: 100px;
+    width: 100px;
+  }
+  #blue {
+    height: 100px;
+    width: 100px;
+  }
+  #yellow {
+    height: 100px;
+    width: 100px;
+  }
+  #contr {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+}
 body {
   text-align: center;
   background-color: #011F3F;
@@ -6,8 +38,8 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
   color: #FEF2BF;
+  margin: 2rem;
 }
 
 .container {
@@ -19,8 +51,8 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 5px solid black;
   border-radius: 20%;
 }
@@ -52,6 +84,7 @@ body {
 }
 
 .mybutton {
+  margin-top: 2.5%;
   padding: 2px;
   width: 100px;
   height: 30px;

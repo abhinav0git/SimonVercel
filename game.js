@@ -11,6 +11,7 @@ $(document).keypress(function() {   //listening to the keypress i.e any keyboard
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
+    $("#infoTitle").css("display","none");
     started = true;
     $(".mybutton").css("display", "none");
   }
@@ -20,6 +21,7 @@ $(".mybutton").on("click", function(){
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
+    $("#infoTitle").css("display","none");
     started = true;
     $(".mybutton").css("display", "none");
   }
@@ -50,6 +52,7 @@ function checkAnswer(currentLevel) {
     else {
       playSound("wrong");
       $("body").addClass("game-over");
+      $("#infoTitle").text("(or click Start)");
       $("#level-title").text("Game Over, Press Any Key to Restart");
 
       setTimeout(function () {
@@ -91,4 +94,5 @@ function startOver() {
   gamePattern = [];
   started = false;
   $(".mybutton").css("display", "inline-block");
+  $("#infoTitle").css("display","inline-block");
 }
