@@ -33,6 +33,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  user-select: none;
 }
 
 #level-title {
@@ -55,6 +56,7 @@ body {
   width: 150px;
   border: 5px solid black;
   border-radius: 20%;
+  cursor: pointer;
 }
 
 .game-over {
@@ -99,6 +101,7 @@ body {
   font-size: .8rem;
   font-family: 'Press Start 2P', cursive;
   transition: transform 180ms;
+  cursor: pointer;
 }
 
 .mybutton:hover {
