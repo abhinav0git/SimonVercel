@@ -71,9 +71,14 @@ function nextSequence() {
   var randomNumber = Math.floor(Math.random() * 4);     // 1 2 3 4
   var randomChosenColour = buttonColours[randomNumber];   
   gamePattern.push(randomChosenColour);   //among 4 color one is chosen and push to the gamePattern array
+  lvlUp(level);
+  let intervalId = setInterval(tilePop, 1600);
 
-  $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);   //$("#" + randomChosenColour) = $("#red") OR $("#green") etc
-  playSound(randomChosenColour);
+  function tilePop(){
+    $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);   //$("#" + randomChosenColour) = $("#red") OR $("#green") etc
+    playSound(randomChosenColour);
+    clearInterval(intervalId);
+  }
 }
 
 function animatePress(currentColor) {
@@ -87,6 +92,12 @@ function animatePress(currentColor) {
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
+}
+
+function lvlUp(level) {
+  var audio = new Audio("sounds/nxtLvl.wav");
+  audio.play();
+  $("#level-title").fadeIn(50).fadeOut(60).fadeIn(70);
 }
 
 function startOver() {
